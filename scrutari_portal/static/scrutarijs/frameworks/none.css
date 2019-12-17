@@ -1,0 +1,263 @@
+/*****************************************************
+* .none-input
+******************************************************/
+
+.none-input-Search, .none-input-Submit {
+display: inline-block;
+}
+
+.none-input-Container {
+margin-bottom: 5px;
+}
+
+@media (min-width: 768px) {
+    
+    .none-input-Container {
+    display: flex;
+    align-items: center;
+    }
+    
+    .none-input-Search {
+    display: block;
+    flex-grow: 9;
+    }
+    
+    .none-input-Search > input {
+    width: 100%;
+    }
+    
+    .none-input-Submit {
+    display: block;
+    flex-grow: 1;
+    padding-left: 10px;
+    padding-right: 10px;
+    }
+
+    .none-input-Parameters {
+    flex-basis: 34%; 
+    width: 34%;    
+    }
+    
+    .none-input-Parameters > button {
+    width: 100%;
+    }
+}
+
+
+/*****************************************************
+* .none-modal
+******************************************************/
+
+.none-modal-Content {
+position: relative;
+display: flex;
+flex-direction: column;
+background-color: #fff;
+background-clip: padding-box;
+border: 1px solid rgba(0, 0, 0, 0.2);
+border-radius: 0.3rem;
+outline: 0;
+}
+
+@media (min-width: 576px) {
+  .none-modal-Dialog {
+    max-width: 500px;
+    margin: 30px auto;
+  }
+}
+
+.none-modal-Footer {
+display: flex;
+align-items: center;
+justify-content: flex-end;
+padding: 15px;
+border-top: 1px solid #e9ecef;
+}
+
+.none-modal-Footer > :not(:first-child) {
+margin-left: .25rem;
+}
+
+.none-modal-Footer > :not(:last-child) {
+margin-right: .25rem;
+}
+
+.none-modal-Header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 15px;
+border-bottom: 1px solid #e9ecef;
+}
+
+.none-modal-Title {
+margin-bottom: 0;
+line-height: 1.5;
+font-size: 1.25rem;
+}
+
+
+/*****************************************************
+* .none-panel
+******************************************************/
+
+.none-panel-Columns {
+display: flex;
+}
+
+.none-panel-Columns > div {
+width: 25%;
+}
+
+
+/*****************************************************
+* .none-result
+******************************************************/
+
+@media (min-width: 768px) {
+    .none-result-Container {
+    display: flex;
+    }
+
+    .none-result-FicheDisplay {
+    width: 66%;    
+    }
+
+    .none-result-Sidebar {
+    width: 34%;    
+    }
+}
+
+
+/*****************************************************
+* .overlay
+******************************************************/
+
+.overlay-Blocker {
+position: fixed;
+top: 0; right: 0; bottom: 0; left: 0;
+width: 100%;  height: 100%;
+overflow: hidden;
+z-index: 10000;
+padding: 20px;
+box-sizing: border-box;
+background-color: rgba(0,0,0, 0.75);
+text-align: center;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.overlay-Dialog {
+position: relative;
+box-sizing: border-box;
+background: #fff;
+border-radius: 8px;
+box-shadow: 0 0 10px #000;
+text-align: left;
+max-width: 700px;
+}
+
+.overlay-Waiting {
+cursor: wait;   
+}
+
+
+/*****************************************************
+* .overlay-panel
+******************************************************/
+
+.overlay-panel-Header, .overlay-panel-Content, .overlay-panel-Footer {
+display: table-row;
+}
+
+.overlay-panel-Header > div {
+border-top-left-radius: 8px;
+border-top-right-radius: 8px;
+text-align: left;
+font-weight: bold;
+min-height: 10px;
+padding-top: 20px;
+padding-bottom: 20px;
+padding-left: 10px;
+padding-right: 10px;
+border-bottom: 1px solid #ddd;
+}
+
+.overlay-panel-Content > div {
+padding: 10px 20px;
+text-align: left;
+font-size: 0.9em;
+min-width: 20vw;
+max-width: 90vw;
+max-height: 70vh;
+overflow: auto;
+background-color: #fff;
+}
+
+.overlay-panel-Content > div p {
+margin-left: 0;
+}
+
+.overlay-panel-Footer > div {
+clear: both;
+padding-bottom: 8px;
+background-color: #fff;
+border-bottom-left-radius: 8px;
+border-bottom-right-radius: 8px;
+}
+
+.overlay-panel-Footer > div > div {
+border-top: 1px solid #ddd;
+text-align: right;
+padding-top: 8px;
+padding-left: 10px;
+padding-right: 10px;
+}
+
+.overlay-panel-Footer button {
+display: inline-block;
+font-weight: 400;
+text-align: center;
+white-space: nowrap;
+vertical-align: middle;
+user-select: none;
+border: 1px solid transparent;
+padding: .5em .75em;
+line-height: 1.25;
+border-radius: .25em;
+transition: all .15s ease-in-out;
+}
+
+.overlay-panel-Footer button:hover {
+cursor: pointer;
+}
+
+.overlay-Waiting .overlay-panel-Footer button[type="submit"]:hover:disabled {
+cursor: wait;
+}
+
+
+/*****************************************************
+* .overlay-button
+******************************************************/
+
+.overlay-button-Close {
+position: absolute;
+top: -12.5px;
+right: -12.5px;
+display: block;
+width: 30px;
+height: 30px;
+border-radius: 15px;
+border: none;
+font-size: 20px;
+background-color: #000;
+color: #fff;
+}
+
+.overlay-button-Close:hover {
+background-color: #61adff;
+}
+

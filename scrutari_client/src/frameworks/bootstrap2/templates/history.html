@@ -1,0 +1,7 @@
+<div data-scrutari-block="{{:name}}" class="scrutari-history-Block scrutari-history-Active">
+    <button type="button" data-scrutari-role="remove" data-scrutari-button="removeHistory" data-scrutari-history-name="{{:name}}" class="close scrutari-Hidden" title="{{>~scrutari_loc('_ button_remove')}}"><span aria-hidden="true">&times;</span><span class="sr-only">{{>~scrutari_loc("_ button_remove")}}</span></button>
+    {{if fichestat > 0}}<a href="javascript:load_{{:name}}" data-scrutari-button="loadHistory" data-scrutari-history-name="{{:name}}">{{/if}}
+    {{>sequence}} ({{:fichestat}})
+    {{if fichestat > 0}}</a>{{/if}}
+    <br/><span data-scrutari-role="subsearch"></span>
+</div>

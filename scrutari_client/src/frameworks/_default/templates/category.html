@@ -1,0 +1,7 @@
+{{!--category API object - see http://www.scrutari.net/dokuwiki/serveurscrutari:json:type_category --}}
+<p>
+<label class="scrutari-Label" {{if phraseMap.description}}title="{{> phraseMap.description}}"{{/if}}>
+<input type="checkbox" name="category" value="{{: name}}" data-scrutari-title="{{> title}}">
+<span data-scrutari-role="stat-text">{{> title}} <small>(<span data-scrutari-stat-type="category" data-scrutari-stat-key="{{: name}}" data-scrutari-stat-default="{{: stats.fiche}}"></span>{{: ~scrutari_format(stats.fiche)}})</small></span>
+</label>
+</p>

@@ -1,0 +1,37 @@
+<p><em>{{>~scrutari_loc("_ result_none")}}</em></p>
+{{if withFilter}}
+<p><em>{{>~scrutari_loc("_ result_fitlerwarning")}}</em></p>
+{{else scrutariResult.searchMeta.reportArray.length > 0}}
+<p>Analyse des termes de la recherche{{>~scrutari_loc("_ colon")}}</p>
+<dl>
+    {{for scrutariResult.searchMeta.reportArray}}
+    <dt>{{> text}}</dt>
+    <dl>
+        {{if canonicalArray.length > 0}}
+        <p>Correspondances trouvées (entre parenthèses, le nombre d'occurrences par langue): </p>
+        <ul>
+            {{for canonicalArray}}
+            <li>
+                {{> canonical}} ({{for langreportArray}}{{if #index > 0}}, {{/if}}{{: lang}}={{: ficheCount}}{{/for}})
+            </li>
+            {{/for}}
+        </ul>
+        {{/if}}
+        {{if neighbourArray.length > 0}}
+        <p>Pas de correspondances trouvées. Termes se rapprochant (entre parenthèses, le code des langues concernées) : </p>
+        <ul>
+            {{for neighbourArray}}
+            <li>
+                {{> neighbour}} <small>({{for langArray}}{{if #index > 0}}, {{/if}}{{: #data}}{{/for}})</small>
+            </li>
+            {{/for}}
+        </ul>
+        {{/if}}
+        {{if canonicalArray.length == 0 && neighbourArray.length == 0}}
+        <p>Aucune correspondance ou terme voisin trouvé</p>
+        {{/if}}
+    </dl>
+    {{/for}}
+</dl>
+
+{{/if}}

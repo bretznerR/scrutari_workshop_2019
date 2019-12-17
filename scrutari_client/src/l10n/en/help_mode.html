@@ -1,0 +1,98 @@
+<p>
+<strong>Simple search (</strong><strong><em>And</em></strong><strong>&nbsp;/ </strong><strong><em>Or</em></strong> <strong>options):</strong> the spaces are delimiters for the search terms; if the option <em>And</em> is selected, a reference has to include all the search terms; if the selected option is <em>Or</em>, a reference has to include at least one of the terms.</p><p>The asterisk <kbd>*</kbd> indicates a truncation:</p><ul>
+<li>
+<p>
+<kbd>gov*</kbd>: all words beginning with &ldquo;gov&rdquo;</p>
+</li>
+<li>
+<p>
+<kbd>*logy</kbd>: all words ending in &ldquo;logy&rdquo;</p>
+</li>
+<li>
+<p>
+<kbd>*eco*</kbd>: all words including &ldquo;eco&rdquo;</p>
+</li>
+</ul><p>If the option <em>&ldquo;*&rdquo; automatically added to the end of the word</em> is ticked, all the words are considered to have a truncation on the right (unless they are in quotation marks).</p><p>We use straight quotation marks to indicate a sequence of words. It is possible to indicate truncations inside quotation marks:</p><ul>
+<li>
+<p>
+<kbd>"organic farming"</kbd>: ignores the term organic if it is not followed by farming</p>
+</li>
+<li>
+<p>
+<kbd>"part"</kbd>: only searches for the word &ldquo;part&rdquo; even if the automatic asterisk to the right is activated</p>
+</li>
+<li>
+<p>
+<kbd>"pub* pol*"</kbd>: search for sequences of a word beginning with &ldquo;pub&rdquo; followed by a word beginning with &ldquo;pol&rdquo;</p>
+</li>
+</ul><p>The following rules apply:</p><ul>
+<li>
+<p>searches do not take accents and uppercase letters into account</p>
+</li>
+<li>
+<p>characters other than letters and figures are ignored</p>
+</li>
+<li>
+<p>the search engine does not propose corrections for typing errors and spelling mistakes</p>
+</li>
+<li>
+<p>the search engine does not index in the references words with one or two letters, such as common words which are not significant in a given language (&ldquo;les, avec, par&rdquo; will be ignored in French, &ldquo;the&rdquo; is ignored in English but not in French, to include searches on the term &ldquo;th&eacute;&rdquo;)</p>
+</li>
+</ul><p>
+<br>
+<strong>Advanced search (&ldquo;Advanced&rdquo; option):</strong> the advanced search uses the same principles as the simple search in terms of syntax (asterisk <kbd>*</kbd> for truncations, quotation marks for sequences) but the space is no longer a delimiter; instead, we use three operators:</p><ul>
+<li>
+<p>
+<kbd>&amp;&amp;</kbd>: And</p>
+</li>
+<li>
+<p>
+<kbd>||</kbd>: Or</p>
+</li>
+<li>
+<p>
+<kbd>!</kbd>: No</p>
+</li>
+</ul><p>We use brackets to form logical groups.</p><p>Examples:</p><ul>
+<li>
+<p>
+<kbd>farming &amp;&amp;~!organic</kbd>: searches for references containing a word beginning with farming and not containing any words beginning with organic</p>
+</li>
+<li>
+<p>
+<kbd>farming &amp;&amp;~!(organic || country)</kbd>: searches for references containing a word beginning with farming and not containing either words beginning with organic or words beginning with country</p>
+</li>
+</ul><p>All syntax errors (including the use of characters other than numbers, unauthorized letters and a space for separating words not in quotation marks) produce an error message.</p><p>It is possible to restrict the search for a word to a given field by prefixing a term. Possible prefixes are:</p><ul>
+<li>
+<p>
+<em>title:</em> = only in titles</p>
+</li>
+<li>
+<p>
+<em>subtitle:</em> = only in subtitles</p>
+</li>
+<li>
+<p>
+<em>keyword:</em> = only in keywords</p>
+</li>
+<li>
+<p>
+<em>additional:</em> = in &ldquo;additional&rdquo; fields (complementary fields and attributes)</p>
+</li>
+<li>
+<p>all attribute names followed by&nbsp;: defined by the search engine (e.g. <em>sct:authors:</em> but it depends on the engine used)</p>
+</li>
+</ul><p>Examples:</p><ul>
+<li>
+<p>
+<kbd>title:governance</kbd>: &ldquo;governance&rdquo; only in the title</p>
+</li>
+<li>
+<p>
+<kbd>sct:authors:"Victor Hugo"</kbd>: search for the author Victor Hugo (if the attribute <em>sct:authors</em> is properly defined by the engine)</p>
+</li>
+<li>
+<p>
+<kbd>title:pol* &amp;&amp;~!sct:authors:Smith</kbd>: reference with a word beginning with &ldquo;pol&rdquo; in the title and whose author is not Smith</p>
+</li>
+</ul><p>See <a href="http://www.scrutari.net/dokuwiki/serveurscrutari:json:qsyntax" hreflang="fr" target="_blank">Search syntax</a> on the Scrutari website (in french)</p>

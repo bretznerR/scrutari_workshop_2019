@@ -1,0 +1,21 @@
+{{if type!=="block"}}
+<p class="scrutari-fiche-Attribute">
+    <span class="scrutari-label-Attribute">{{>title}}{{>~scrutari_loc("_ colon")}}</span>
+    {{for valueArray ~len=valueArray.length}}
+        {{:~scrutari_mark(#data)}}{{if #index != (~len -1)}}, {{/if}}
+    {{/for}}
+</p>
+{{else}}
+<div class="scrutari-fiche-AttributeBlock">
+    <p class="scrutari-fiche-AttributeTitle">
+        <span class="scrutari-label-Attribute">{{>title}}{{>~scrutari_loc("_ colon")}}</span>
+    </p>
+    <div class="scrutari-fiche-AttributeValues">
+    {{for valueArray ~len=valueArray.length}}
+        <p class="scrutari-fiche-AttributeValue">
+            {{:~scrutari_mark(#data)}}
+        </p>
+    {{/for}}
+    </div>
+</div>
+{{/if}}

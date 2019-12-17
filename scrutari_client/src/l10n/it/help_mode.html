@@ -1,0 +1,95 @@
+<p>
+<strong>Ricerca semplice (Opzioni </strong><strong><em>e</em></strong><strong>&nbsp;/ </strong><strong><em>o</em></strong><strong>)&nbsp;:</strong>gli spazi servono a delimitare le parole della ricerca&nbsp;; se si selziona l&rsquo;opzione E il rinvio deve contenere tutte le parole della ricerca&nbsp;; se si seleziona l&rsquo;opzione O il rinvio deve possedere almeno una parola della ricerca.</p><p>L&rsquo;asterisco <kbd>*</kbd>&nbsp;indica una troncatura&nbsp;:</p><ul>
+<li>
+<p>
+<kbd>gov*</kbd>&nbsp;: tutte le parole che cominciano con &laquo;&nbsp;gov&nbsp;&raquo;</p>
+</li>
+<li>
+<p>
+<kbd>*logia</kbd>&nbsp;: tutte le parole che finiscono con &laquo;&nbsp;logia&nbsp;&raquo;</p>
+</li>
+<li>
+<p>
+<kbd>*eco*</kbd>&nbsp;: tutte le parole che contengono &laquo;&nbsp;eco&nbsp;&raquo;</p>
+</li>
+</ul><p>Se si seleziona l&rsquo;opzione &laquo;&nbsp;*&nbsp;&raquo; <em>aggiunto automaticamente alla fine della parola</em>, tutte le parole saranno da considerarsi con una troncatura a destra (fanno eccezione le parole tra virgolette).</p><p>Per indicare una sequenza di termini si usano le virgolette alte. All&rsquo;interno delle virgolette si possono indicare le troncature &nbsp;:</p><ul>
+<li>
+<p>
+<kbd>"agricoltura biologica"</kbd>&nbsp;: il termine agricoltura viene ignorato se non &egrave; seguito dall&rsquo;aggettivo biologica</p>
+</li>
+<li>
+<p>
+<kbd>"part"</kbd>: cerca solo la parola &laquo;&nbsp;part&nbsp;&raquo; anche se l&rsquo;opzione automatica asterisco a destra &egrave; attiva</p>
+</li>
+<li>
+<p>
+<kbd>"pol*pub*"</kbd>: cerca le sequenze che contengono una parola che comincia con &laquo;&nbsp;pol&nbsp;&raquo; seguita da una parola che comincia con &laquo;&nbsp;pub&nbsp;&raquo;</p>
+</li>
+</ul><p>Per finire valgono le seguenti regole&nbsp;:</p><ul>
+<li>
+<p>la ricerca non considera accenti e maiuscole</p>
+</li>
+<li>
+<p>i soli caratteri presi in considerazione sono le lettere e le cifre</p>
+</li>
+<li>
+<p>il motore non propone correzioni in caso di errori di ortografia</p>
+</li>
+<li>
+<p>il motore non considera le parole di una o due lettere, n&eacute; le parole di uso corrente ma senza significato proprio ( per esempio&nbsp;: gli, con, per )</p>
+</li>
+</ul><p>
+<br>
+<strong>Ricerca avanzata ( Opzione &laquo;&nbsp;Avanzata&nbsp;&raquo;)&nbsp;:</strong> la ricerca avanzata usa gli stessi principi della ricerca delle parole ( asterisco * per le troncature, virgolette per le sequenze) ma lo spazio non ha pi&ugrave; la funzione di separatore. Al suo posto si usano tre operatori&nbsp;:</p><ul>
+<li>
+<p>
+<kbd>&amp;&amp;</kbd>&nbsp;: E</p>
+</li>
+<li>
+<p>
+<kbd>||</kbd>&nbsp;: O</p>
+</li>
+<li>
+<p>
+<kbd>!</kbd>&nbsp;: No</p>
+</li>
+</ul><p>Per formare gruppi logici si fa ricorso alle parentesi.</p><p>Esempi&nbsp;:</p><ul>
+<li>
+<p>
+<kbd>agricoltura &amp;&amp; !biologica</kbd>&nbsp;: cerca i risultati che contengono la parola agricoltura non seguita dalla parola biologica</p>
+</li>
+<li>
+<p>
+<kbd>agricoltura &amp;&amp; !(biologico || paese)</kbd>&nbsp;: cerca i risultati che contengono la parola agricoltura et che non contengano la parola biologica o paese.</p>
+</li>
+</ul><p>Gli errori di sintassi (compreso l&rsquo;uso di caratteri non autorizzati che non siano cifre o lettere, e lo spazio per separare parole non virgolettate) provocano un messaggio di errore.</p><p>La ricerca di una parola pu&ograve; essere circoscritta a un campo preciso grazie a un prefisso. I prefissi sono&nbsp;:</p><ul>
+<li>
+<p>
+<em>titolo:</em> = solo tra i titoli</p>
+</li>
+<li>
+<p>
+<em>sottotitolo:</em> = solo tra i sottotitoli</p>
+</li>
+<li>
+<p>
+<em>parolachiave:</em> = solo tra le parole chiave</p>
+</li>
+<li>
+<p>
+<em>supplemento:</em> = tra i campi supplementari (campi complementari e attributi)</p>
+</li>
+</ul><p>qualsiasi nome di attributo seguito da&nbsp;<em>:</em> definito dal motore ( per sempio&nbsp;: <em>sct:authors</em>. Questo dipende dal motore che si usa.)</p><p>Esempi&nbsp;:</p><ul>
+<li>
+<p>
+<kbd>titolo:governance</kbd>&nbsp;: &laquo; governance &raquo;nel titolo</p>
+</li>
+<li>
+<p>
+<kbd>sct:authors:"Victor Hugo"</kbd>&nbsp;: Ricerca su l&rsquo;autore Victor Hugo (se l&rsquo;attributo <em>sct:authors</em> &egrave; definito correttamente dal motore)</p>
+</li>
+<li>
+<p>
+<kbd>titolo:pol* &amp;&amp; !sct:authors:Dupont</kbd>&nbsp;: risultato con, nel titolo, una parola che comincia con &laquo;&nbsp;pol&nbsp;&raquo; e il cui autore non sia Dupont.</p>
+</li>
+</ul><p>Guardare <a href="http://www.scrutari.net/dokuwiki/serveurscrutari:json:qsyntax" hreflang="fr" target="_blank">Syntaxe d&rsquo;une recherche</a> sul sito di Scrutari</p>

@@ -1,0 +1,181 @@
+html,
+body {
+   margin:0;
+   padding:0;
+   height:100%;
+}
+#main {
+   min-height:100%;
+   position:relative;
+}
+#boussole {
+	background-color: rgba(240, 148, 26, 0.15);
+	z-index: 100;
+	width: 100%;
+	
+}
+
+#boussole a, #boussole a:visited {
+	color: #544634;
+}
+
+#boussole ul {
+	margin: 0;
+	padding: 0;
+}
+
+#boussole li {
+	display: inline-block;
+	margin: 0;
+	font-size: 12px;
+}
+
+
+#body {
+   padding-bottom:100px;   /* Height of the footer */
+}
+#footer {
+   position:absolute;
+   bottom:0;
+   width:100%;
+   height:100px;   /* Height of the footer */
+}
+
+#footerRow {
+	text-align: center;
+	border-top-color: #544634;
+	border-top-width: 1px;
+	border-top-style: solid;
+	font-size: 12px;
+}
+
+#footerRow .index-FooterTitle {
+	padding-top: 10px;
+	padding-bottom: 5px;
+	color: #544634;
+}
+
+#searchTitleRow {
+	border-bottom-color: #544634;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	margin-top: 20px;
+	padding-bottom: 10px;
+}
+
+#searchTitleRow h1 {
+	font-size: 16px;
+	font-weight: bold;
+	color: #544634;
+	margin: 0;
+}
+
+
+
+#headerRow {
+	text-align: center;
+	margin-top: 40px;
+}
+
+h1 {
+	font-size: 20px;
+	color: #c8361b;
+}
+
+h2 {
+	font-size: 16px;
+	font-weight: bold;
+	color: #544634;
+	margin-top: 40px;
+	margin-bottom: 25px;
+}
+
+h3 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #544634;
+	margin-top: 40px;
+	margin-bottom: 25px;
+}
+
+
+#logosPanel {
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+
+#searchInput {
+	margin-bottom: 10px;
+	margin-top: 50px;
+}
+
+#searchInput input {
+border-radius: 4px;
+padding: 2px;
+border-style: solid;
+border-width: 1px;
+border-color: #544634;
+}
+
+#searchSubmit {
+	margin-bottom: 60px;
+}
+
+#randomList {
+	max-width: 450px;
+	margin: auto;
+}
+
+.index-Icon {
+	vertical-align: baseline;
+}
+
+/***********************************
+ * Surcharge de Scrutari
+ */
+.scrutari-area-Stats {
+	/*
+	margin: auto;
+	margin-top: 30px;
+	text-align: center;
+	margin-bottom: 30px;*/
+}
+
+.scrutari-button-Parameters {
+		margin-top: 20px;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    color: rgb(255, 255, 255);
+    background-color: #544634;
+    border-color: #544634;
+}
+
+.btn-primary {
+    color: rgb(255, 255, 255);
+    background-color: #544634;
+    border-color: #544634;
+}
+
+
+@media (min-width: 768px) {
+  #boussole {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 22px;
+	text-align: center;
+  }
+  #boussole li {
+	padding-right: 20px;
+  }
+  #boussole li:first-child {
+	padding-left: 20px;
+  }
+  #scrutariRow {
+	margin-top: 30px;
+  }
+  #headerRow {
+	margin-top: 80px;
+  }
+}

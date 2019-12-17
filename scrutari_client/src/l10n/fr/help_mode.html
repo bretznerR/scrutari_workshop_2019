@@ -1,0 +1,98 @@
+<p>
+<strong>Recherche simple (Options </strong><strong><em>Et</em></strong><strong>&nbsp;/ </strong><strong><em>Ou</em></strong><strong>)&nbsp;:</strong> les espaces servent de d&eacute;limiteurs aux mots de la recherche ; si l&rsquo;option <em>Et</em> est s&eacute;lectionn&eacute;, une r&eacute;f&eacute;rence devra poss&eacute;der tous le mots de la recherche ; si c&rsquo;est l&rsquo;option <em>Ou</em>, une r&eacute;f&eacute;rence devra en poss&eacute;der au moins un.</p><p>L&rsquo;ast&eacute;risque <kbd>*</kbd> est le caract&egrave;re indiquant une troncature&nbsp;:</p><ul>
+<li>
+<p>
+<kbd>gouv*</kbd>&nbsp;: tous les mots commen&ccedil;ant par &laquo; gouv &raquo;</p>
+</li>
+<li>
+<p>
+<kbd>*logie</kbd>&nbsp;: tous les mots finissant par &laquo; logie &raquo;</p>
+</li>
+<li>
+<p>
+<kbd>*eco*</kbd>&nbsp;: tous les mots contentant &laquo; eco &raquo;</p>
+</li>
+</ul><p>Si l&rsquo;option <em>&laquo; * &raquo; rajout&eacute; automatiquement en fin de mot</em> est coch&eacute;e, tous les mots sont consid&eacute;r&eacute;es comme ayant une troncature &agrave; droite (sauf s&rsquo;ils sont entre guillemets).</p><p>On utilise les guillemets droits pour indiquer une s&eacute;quence de mots. Il est possible d&rsquo;indiquer des troncatures &agrave; l&rsquo;int&eacute;rieur des guillemets&nbsp;:</p><ul>
+<li>
+<p>
+<kbd>"agriculture biologique"</kbd>&nbsp;: ignore le terme agriculture s&rsquo;il n&rsquo;est pas suivi par biologique</p>
+</li>
+<li>
+<p>
+<kbd>"part"</kbd>&nbsp;: cherche uniquement sur le mot &laquo; part &raquo; m&ecirc;me si l&rsquo;option d&rsquo;ast&eacute;risque &agrave; droite automatique est activ&eacute;e</p>
+</li>
+<li>
+<p>
+<kbd>"pol* pub*"</kbd>&nbsp;: cherche les s&eacute;quences d&rsquo;un mot commen&ccedil;ant par &laquo; pol &raquo; suivi d&rsquo;un mot commen&ccedil;ant par &laquo; pub &raquo;</p>
+</li>
+</ul><p>Enfin les r&egrave;gles suivantes s&rsquo;appliquent&nbsp;:</p><ul>
+<li>
+<p>la recherche ne tient pas compte des accents et des majuscules</p>
+</li>
+<li>
+<p>les caract&egrave;res autres que les lettres et les chiffres sont ignor&eacute;s</p>
+</li>
+<li>
+<p>le moteur ne propose pas de corrections des fautes de frappe et d&rsquo;orthographe</p>
+</li>
+<li>
+<p>le moteur n&rsquo;indexe pas dans les r&eacute;f&eacute;rences les mots d&rsquo;une ou deux lettres ainsi que les mots courants non signifiants dans une langue donn&eacute;e (&laquo; les, avec, par &raquo; seront ignor&eacute;s en fran&ccedil;ais, &laquo; the &raquo; est ignor&eacute; en anglais mais pas en fran&ccedil;ais (recherche sur le th&eacute;))</p>
+</li>
+</ul><p>
+<br>
+<strong>Recherche avanc&eacute;e (Option &laquo; Avanc&eacute;e &raquo;)&nbsp;:</strong> la recherche avanc&eacute;e reprend les principes de la recherche des mots pour la syntaxe des mots (ast&eacute;risque <kbd>*</kbd> pour les troncatures, guillemets pour les s&eacute;quences) mais l&rsquo;espace ne sert plus de s&eacute;parateur, on utilise &agrave; la place trois op&eacute;rateurs&nbsp;:</p><ul>
+<li>
+<p>
+<kbd>&amp;&amp;</kbd>&nbsp;: Et</p>
+</li>
+<li>
+<p>
+<kbd>||</kbd>&nbsp;: Ou</p>
+</li>
+<li>
+<p>
+<kbd>!</kbd>&nbsp;: Non</p>
+</li>
+</ul><p>On utilise des parenth&egrave;ses pour former des groupes logiques.</p><p>Exemples&nbsp;:</p><ul>
+<li>
+<p>
+<kbd>agriculture &amp;&amp; !biologique</kbd>&nbsp;: cherche les r&eacute;f&eacute;rences contenant un mot commen&ccedil;ant par agriculture et ne contenant pas de mot commen&ccedil;ant par biologique</p>
+</li>
+<li>
+<p>
+<kbd>agriculture &amp;&amp; !(biologique || pays)</kbd>&nbsp;: cherche les r&eacute;f&eacute;rences contenant un mot commen&ccedil;ant par agriculture et ne contenant ni mot commen&ccedil;ant par biologique, ni mot commen&ccedil;ant par pays</p>
+</li>
+</ul><p>Tout erreur de syntaxe (y compris l&rsquo;utilisation de caract&egrave;res autre que des chiffres et des lettres non autoris&eacute;s, l&rsquo;espace pour s&eacute;parer des mots qui ne sont pas entre guillemets) entraine un message d&rsquo;erreur.</p><p>Il est possible de r&eacute;duire pour un mot la recherche &agrave; un champ donn&eacute; en pr&eacute;fixant ce mot. Les pr&eacute;fixes possibles sont&nbsp;:</p><ul>
+<li>
+<p>
+<em>titre:</em> = dans les titres uniquement</p>
+</li>
+<li>
+<p>
+<em>soustitre:</em> = dans les sous-titres uniquement</p>
+</li>
+<li>
+<p>
+<em>motcle:</em> = dans les mots-cl&eacute;s uniquement</p>
+</li>
+<li>
+<p>
+<em>supplement:</em> = dans les champs &laquo; suppl&eacute;mentaires &raquo; (les champs compl&eacute;mentaires et les attributs)</p>
+</li>
+<li>
+<p>tout nom d&rsquo;attribut suivi de <em>:</em> d&eacute;fini par le moteur (par exemple, <em>sct:authors:</em> mais cela d&eacute;pend du moteur utilis&eacute;)</p>
+</li>
+</ul><p>Exemples&nbsp;:</p><ul>
+<li>
+<p>
+<kbd>titre:gouvernance</kbd>&nbsp;: &laquo; gouvernance &raquo; uniquement dans le titre</p>
+</li>
+<li>
+<p>
+<kbd>sct:authors:"Victor Hugo"</kbd>&nbsp;: Recherche sur l&rsquo;auteur Victor Hugo (si l&rsquo;attribut <em>sct:authors</em> est bien d&eacute;fini par le moteur)</p>
+</li>
+<li>
+<p>
+<kbd>titre:pol* &amp;&amp; !sct:authors:Dupont</kbd>&nbsp;: r&eacute;f&eacute;rence avec un mot commen&ccedil;ant par &laquo; pol &raquo; dans le titre et dont l&rsquo;auteur n&rsquo;est pas Dupont</p>
+</li>
+</ul><p>Voir <a href="http://www.scrutari.net/dokuwiki/serveurscrutari:json:qsyntax" target="_blank">Syntaxe d&rsquo;une recherche</a> sur le site de Scrutari</p>

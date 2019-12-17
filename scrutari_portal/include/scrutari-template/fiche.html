@@ -1,0 +1,73 @@
+{{!-- --}}
+<div class="scrutari-fiche-Block" data-scrutari-block="fiche_{{:codefiche}}">
+{{if _thumbnail}}
+    <div class="scrutari-fiche-Thumbnail">
+        <img class="scrutari-fiche-ThumbnailImg" alt="" src="{{:_thumbnail}}"/>
+    {{if _icon}}
+        <img class="scrutari-fiche-ThumbnailIcon" alt="" src="{{:_icon}}"/>
+    {{/if}}
+    </div>
+{{else _icon}}
+    <div class="scrutari-fiche-Icon"><img alt="" src="{{:_icon}}"/></div>
+{{/if}}
+<div class="scrutari-fiche-Body {{if _thumbnail}}scrutari-fiche-ThumbnailBody{{/if}}">
+    <p class="scrutari-fiche-Titre">
+        <a href="{{:href}}"
+           class="scrutari-fiche-Link"
+           data-scrutari-link="fiche_{{:codefiche}}"
+           {{if _target}} target="{{:_target}}"{{/if}}>
+        {{if mtitre}}
+            {{:~scrutari_mark(mtitre)}}
+        {{else}}
+            {{:href}}
+        {{/if}}
+        </a>
+    </p>
+{{if msoustitre}}
+    <p class="scrutari-fiche-Soustitre">
+        {{:~scrutari_mark(msoustitre)}}
+    </p>
+{{/if}}
+{{if year || _hasMAttribute("sct:authors")}}
+    <p class='scrutari-fiche-Year'>
+        {{if _hasMAttribute("sct:authors")}}
+            {{for mattrMap["sct:authors"] ~len=mattrMap["sct:authors"].length}}
+                {{:~scrutari_mark(#data)}}{{if #index != (~len -1)}}, {{/if}}
+            {{/for}}
+        {{/if}}
+        {{if year && _hasMAttribute("sct:authors")}}
+        –
+        {{/if}}
+        {{:year}}
+    </p>
+{{/if}}
+{{if mcomplementArray}}
+{{for mcomplementArray}}
+    <p class="scrutari-fiche-Complement">
+        <span class="scrutari-label-Complement">
+        {{>title}}
+        {{>~scrutari_loc("_ colon")}}
+        </span>
+        {{:~scrutari_mark(mvalue)}}
+    </p>
+{{/for}}
+{{/if}}
+{{if _secondaryAttributeArray}}
+{{for _secondaryAttributeArray tmpl="fiche_attributes" /}}
+{{/if}}
+{{if _motcleArray}}
+    <p class="scrutari-fiche-Motcle">
+        <span class="scrutari-label-Motcle">
+            {{if _motcleArray.length == 1}}
+                {{>~scrutari_loc("_ fiche_motscles_one")}}
+            {{else}}
+                {{>~scrutari_loc("_ fiche_motscles_many")}}
+            {{/if}}
+        </span>
+        {{for _motcleArray ~len=_motcleArray.length}}
+            {{if mlabelArray}}{{for mlabelArray}}{{if #index > 0}}/{{/if}}{{:~scrutari_mark(mvalue)}}{{/for}}{{/if}}{{if #index != (~len -1)}}, {{/if}}
+        {{/for}}
+    </p>
+{{/if}}
+</div>
+</div>

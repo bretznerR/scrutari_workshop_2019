@@ -1,0 +1,12 @@
+Scrutari.js
+api/Config.js
+api/Ajax.js
+api/Meta.js
+api/Result.js
+client/Utils.js
+client/Loc.js
+client/FilterState.js
+client/Stats.js
+client/Client.js
+client/Client.Result.js
+client/Client.Ui.js

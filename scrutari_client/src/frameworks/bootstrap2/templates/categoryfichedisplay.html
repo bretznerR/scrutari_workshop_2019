@@ -1,0 +1,19 @@
+<ul class="nav nav-tabs" role="tablist">
+{{for array}}
+    <li  class="{{if active}}active{{/if}}">
+        <a role="tab" data-toggle="tab" {{if category.phraseMap.description}}title="{{>category.phraseMap.description}}"{{/if}} href="javascript:load_category_{{:category.name}}"
+            data-target="[data-scrutari-block='category_{{:category.name}}']">
+                {{>category.title}} ({{:fichestat}})
+        </a>
+    </li>
+{{/for}}
+</ul>
+<div class="tab-content">
+{{for array}}
+<div class="tab-pane{{if active}} active{{/if}}"  data-scrutari-block="category_{{:category.name}}">
+    <div data-scrutari-block="topPagination_{{:category.name}}"></div>
+    <div data-scrutari-block="fiches_{{:category.name}}"></div>
+    <div data-scrutari-block="bottomPagination_{{:category.name}}"></div>
+</div>
+{{/for}}
+</div>

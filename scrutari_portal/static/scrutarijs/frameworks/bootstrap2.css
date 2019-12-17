@@ -1,0 +1,12 @@
+.scrutari-panel-Title > .scrutari-Disabled {
+color: grey;
+}
+
+.scrutari-panel-Title > .scrutari-panel-Active {
+color: green;
+}
+
+.modal-title {
+font-size: 1.3em;
+}
+

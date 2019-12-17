@@ -1,0 +1,91 @@
+/*****************************************************
+* .none-modal
+******************************************************/
+
+.none-modal-Content {
+    background-color: #fff;
+    border-color: rgba(0, 0, 0, 0.2);
+}
+
+.none-modal-Footer {
+    border-top-color: #e9ecef;
+}
+
+.none-modal-Header {
+    border-bottom-color: #e9ecef;
+}
+
+
+/*****************************************************
+* .none-panel
+******************************************************/
+
+.none-panel-Header {
+    border-bottom-color: #ddd;
+    background-color: #f5f5f5;
+}
+
+.none-panel-Section {
+    border-color: #ddd;
+}
+
+
+/*****************************************************
+* .overlay
+******************************************************/
+
+.overlay-Blocker {
+    background-color: rgba(0,0,0, 0.75);
+}
+
+.overlay-Dialog {
+    background-color: #fff;
+    box-shadow: 0 0 10px #000;
+}
+
+
+/*****************************************************
+* .overlay-panel
+******************************************************/
+
+.overlay-panel-Header > div {
+    color: #fff;
+    background-color: #007bff;
+    border-bottom-color: #007bff;
+}
+
+.overlay-panel-Content > div {
+    background-color: #fff;
+}
+
+.overlay-panel-Footer > div {
+    background-color: #fff;
+}
+
+.overlay-panel-Footer > div > div {
+    border-color: #007bff;
+}
+
+.overlay-panel-Footer button {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.overlay-Waiting .overlay-panel-Footer button[type="submit"]:hover:disabled {
+    background-color: #61adff;
+}
+
+
+/*****************************************************
+* .overlay-button
+******************************************************/
+
+.overlay-button-Close {
+    background-color: #000;
+    color: #fff;
+}
+
+.overlay-button-Close:hover {
+    background-color: #61adff;
+}

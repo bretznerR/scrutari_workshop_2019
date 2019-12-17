@@ -1,0 +1,46 @@
+/*****************************************************
+* .scrutari-panel
+******************************************************/
+.scrutari-panel-Div {
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ddd;
+    border-radius: 3px;
+}
+
+
+.scrutari-panel-Heading {
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #ddd;
+    background-color: #f5f5f5;
+}
+
+/*****************************************************
+* .overlay-panel
+******************************************************/
+.overlay-panel-Header > div {
+    color: #fff;
+    background-color: #007bff;
+    border-bottom: 1px solid #007bff;
+}
+
+.overlay-panel-Footer > div > div {
+    border-color: #007bff;
+}
+
+.overlay-panel-Footer button {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.overlay-panel-Footer button:hover {
+    cursor: pointer;
+}
+
+.overlay-Waiting .overlay-panel-Footer button[type="submit"]:hover:disabled {
+    background-color: #61adff;
+}
+
+

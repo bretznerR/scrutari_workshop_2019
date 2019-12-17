@@ -1,0 +1,15 @@
+<div class="scrutari-category-List" role="tablist">
+{{for array}}
+    <span role="tab" class="scrutari-category-Tab {{if active}}scrutari-On{{/if}}" data-scrutari-role="category-tab" data-scrutari-button="categoryTab" {{if category.phraseMap.description}}title="{{>category.phraseMap.description}}"{{/if}}
+            data-scrutari-category="{{:category.name}}">
+                {{>category.title}} ({{:fichestat}})
+    </span>
+{{/for}}
+</div>
+{{for array}}
+<div class="scrutari-category-Content {{if !active}}scrutari-Hidden{{/if}}"  data-scrutari-role="category-content" data-scrutari-category="{{:category.name}}">
+    <div data-scrutari-block="topPagination_{{:category.name}}"></div>
+    <div data-scrutari-block="fiches_{{:category.name}}"></div>
+    <div data-scrutari-block="bottomPagination_{{:category.name}}"></div>
+</div>
+{{/for}}

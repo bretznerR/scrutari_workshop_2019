@@ -1,0 +1,9 @@
+{{!--base API object - see http://www.scrutari.net/dokuwiki/serveurscrutari:json:type_base --}}
+<p>
+<label class="scrutari-Label" {{if phraseMap.longtitle}}title="{{> phraseMap.longtitle}}"{{/if}}><input type="checkbox" name="base" value="{{: codebase}}" data-scrutari-title="{{> title}}">
+{{if baseicon}}
+<img src="{{: baseicon}}" alt="" class="scrutari-panel-Icon">
+{{/if}}
+<span data-scrutari-role="stat-text">{{> title}} <small>(<span data-scrutari-stat-type="base" data-scrutari-stat-key="{{: codebase}}" data-scrutari-stat-default="{{: stats.fiche}}"></span>{{: ~scrutari_format(stats.fiche)}})</small></span>
+</label>
+</p>

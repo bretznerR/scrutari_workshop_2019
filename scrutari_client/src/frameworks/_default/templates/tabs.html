@@ -1,0 +1,17 @@
+<div class="scrutari-pagination-List">
+    {{for tabArray}}
+        {{if state==='active'}}
+        <span class="scrutari-pagination-Current">{{>title}}</span>
+        {{else state==='disabled'}}
+        <span class="scrutari-pagination-Disabled scrutari-Disabled">{{>title}}</span>
+        {{else}}
+        <span
+               class="scrutari-pagination-Tab"
+               data-scrutari-button="ficheTab"
+               data-scrutari-type="{{:~root.type}}"
+               data-scrutari-position="{{:~root.position}}"
+               data-scrutari-number="{{:number}}"
+               {{if ~root.category}} data-scrutari-category="{{:~root.category}}"{{/if}}>{{>title}}</span>
+        {{/if}}
+    {{/for}}
+</div>

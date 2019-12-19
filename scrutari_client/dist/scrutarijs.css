@@ -1,0 +1,441 @@
+/*****************************************************
+* .scrutari
+******************************************************/
+
+.scrutari-Hidden {
+display: none !important;
+}
+
+.scrutari-Disabled {
+color: grey;
+}
+
+.scrutari-Mark {
+background-color: #e9e9e9;
+}
+
+.scrutari-On {
+}
+
+
+/*****************************************************
+* .scrutari-area
+******************************************************/
+
+.scrutari-area-Parameters {
+margin-top: 5px;
+margin-bottom: 25px;
+}
+
+.scrutari-area-Result {
+margin-bottom: 10px;
+}
+
+.scrutari-area-Stats {
+margin-top: 15px;
+margin-bottom: 15px;
+}
+
+.scrutari-area-Title {
+}
+
+.scrutari-area-Resubmit {
+margin-top: 5px;
+text-align: right;
+}
+
+
+/*****************************************************
+* .scrutari-category
+******************************************************/
+
+.scrutari-category-Tab {
+display: inline-block;
+padding-left: 4px;
+padding-right: 4px;
+cursor: pointer;    
+}
+
+.scrutari-category-Tab:hover {
+background-color: #e9e9e9;
+}
+
+.scrutari-category-Tab.scrutari-On {
+cursor: auto;
+background-color: #e9e9e9;
+}
+
+
+/*****************************************************
+* .scrutari-fiche
+******************************************************/
+
+.scrutari-fiche-Attribute {
+margin-left: 15px;
+font-size: 1.0em;
+margin-bottom: 2px;
+}
+
+.scrutari-fiche-AttributeBlock {
+margin-bottom: 2px;
+}
+
+.scrutari-fiche-AttributeTitle {
+margin-left: 15px;
+font-size: 1.0em;
+margin-bottom: 0;
+}
+
+.scrutari-fiche-AttributeValue {
+margin-left: 30px;
+font-size: 1.0em;
+margin-bottom: 0;
+}
+
+.scrutari-fiche-AttributeValues {
+    
+}
+
+.scrutari-fiche-AttributeValue::before {
+    content: '… ';
+}
+
+.scrutari-fiche-AttributeValue::after {
+    content: ' …';
+}
+
+.scrutari-fiche-Block {
+margin-bottom: 15px;
+padding-left: 3px;
+}
+
+.scrutari-fiche-Body {
+margin-left: 21px;
+}
+
+.scrutari-fiche-Body.scrutari-fiche-ThumbnailBody {
+margin-left: 110px;
+}
+
+.scrutari-fiche-Body::after {
+content: '';
+display: block;
+clear: left;
+}
+
+.scrutari-fiche-Complement {
+margin-left: 15px;
+font-size: 1.0em;
+margin-bottom: 2px;
+}
+
+.scrutari-fiche-Icon {
+float: left;
+margin-top: 0;
+}
+
+.scrutari-fiche-Motcle {
+font-variant: small-caps;
+font-size: 1.0em;
+margin-left: 15px;
+margin-bottom: 2px;
+}
+
+.scrutari-fiche-Soustitre {
+margin-bottom: 3px;
+font-style: italic;
+margin-left: 10px;
+}
+
+.scrutari-fiche-Thumbnail {
+float: left;
+margin-top: 0;
+position: relative;
+}
+
+.scrutari-fiche-ThumbnailImg {
+max-width: 100px;
+}
+
+.scrutari-fiche-ThumbnailIcon {
+display: block;
+position: absolute;
+top: 0;
+left: 0;
+border-right-color: #fff;
+border-right-style: solid;
+border-right-width: 3px;
+border-bottom-color: #fff;
+border-bottom-style: solid;
+border-bottom-width: 2px;
+background-color: #fff;
+border-bottom-right-radius: 2px;
+z-index: 100;
+}
+
+.scrutari-fiche-Titre {
+font-size: 1.1em;
+margin-bottom: 4px;
+margin-left: 0;
+margin-top: 0;
+}
+
+.scrutari-fiche-Year {
+font-size: 1.0em;
+margin-bottom: 3px;
+font-style: italic;
+margin-left: 15px;
+}
+
+
+/*****************************************************
+* .scrutari-history
+******************************************************/
+
+.scrutari-history-Active {
+background-color: #e9e9e9;
+}
+
+.scrutari-history-Block {
+padding: 2px;
+margin-top: 6px;
+margin-left: 6px;
+word-wrap: break-word;
+}
+
+.scrutari-history-Load {
+    
+}
+
+.scrutari-history-Remove {
+    
+}
+
+.scrutari-history-Search {
+    
+}
+
+.scrutari-history-Subsearch {
+    margin-left: 10px;
+}
+
+/*****************************************************
+* .scrutari-icon
+******************************************************/
+
+.scrutari-icon-Loader {
+background-image: url("images/ajax-loader.gif");
+position: relative;
+display: inline-block;
+width: 16px;
+height: 16px;
+}
+
+.scrutari-icon-Logo {
+background-image: url("images/logo-scrutari.png");
+position: relative;
+bottom: -10px;
+display: inline-block;
+width: 32px;
+height: 32px;
+}
+
+
+/*****************************************************
+* .scrutari-input
+******************************************************/
+
+.scrutari-input-Text {
+border-bottom-left-radius: 4px;
+border-top-left-radius: 4px;
+padding: 2px;
+border-style: solid;
+border-width: 1px;
+border-color: #dfdfdf;
+border-top-color: #a0a0a0;
+border-left-color: #a0a0a0;
+}
+
+
+/*****************************************************
+* .scrutari-label
+******************************************************/
+
+.scrutari-label-Attribute {
+font-style: italic;
+}
+
+.scrutari-label-Complement {
+font-style: italic;
+}
+
+.scrutari-label-Motcle {
+font-style: italic;
+font-variant: normal;
+}
+
+
+/*****************************************************
+* .scrutari-links
+******************************************************/
+
+.scrutari-links-ButtonLike {
+display: inline-block;
+padding-top: 2px;
+padding-right: 5px;
+padding-left: 5px;
+border-radius: 3px;
+border-style: solid;
+border-width: 1px;
+border-color: #a0a0a0;
+margin-right: 5px;
+color: #515151;
+}
+
+.scrutari-links-ButtonLike:visited {
+color: #515151;
+}
+
+.scrutari-links-ButtonLike:hover {
+background-color: #dfdfdf;
+color: #515151;
+text-decoration: none;
+}
+
+.scrutari-links-Permalink {
+text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
+}
+
+.scrutari-links-Permalink:hover {
+white-space: normal;
+overflow-wrap: break-word;
+}
+
+.scrutari-links-Poweredby {
+font-size: 0.8em;
+text-align: center;
+margin-top: 20px;
+}
+
+.scrutari-links-Title {
+margin-top: 20px;
+margin-bottom: 5px;
+word-wrap: break-word;
+font-weight: bold;
+}
+
+
+
+/*****************************************************
+* .scrutari-pagination
+******************************************************/
+
+.scrutari-pagination-List {
+margin-top: 15px;
+margin-bottom: 15px;
+}
+
+.scrutari-pagination-Tab, .scrutari-pagination-Current, .scrutari-pagination-Disabled {
+display: inline-block;
+padding-left: 4px;
+padding-right: 4px;
+}
+
+.scrutari-pagination-Tab {
+cursor: pointer;
+}
+
+.scrutari-pagination-Current, .scrutari-pagination-Tab:hover {
+background-color: #e9e9e9;
+}
+
+
+/*****************************************************
+* .scrutari-panel
+******************************************************/
+
+.scrutari-panel-Active {
+color: green;
+}
+
+.scrutari-panel-ColumnDisabled {
+opacity: 0.5;
+}
+
+.scrutari-panel-Excluded {
+text-decoration: line-through;
+color: grey;
+}
+
+.scrutari-panel-Icon {
+vertical-align: baseline;
+}
+
+
+/*****************************************************
+* .scrutari-stats
+******************************************************/
+
+.scrutari-stats-Table {
+    margin-bottom: 5px;
+}
+
+.scrutari-stats-Abbr {
+text-decoration: none;
+}
+
+.scrutari-stats-Count {
+font-family: monospace;
+font-weight: bold;
+text-align: right;
+}
+
+.scrutari-stats-Filter {
+color: green;
+}
+
+.scrutari-stats-None {
+color: red;
+}
+
+.scrutari-stats-Titles {
+font-size: 0.9em;
+padding-left: 10px;
+}
+
+.scrutari-stats-Cell {
+vertical-align: baseline;
+}
+
+.scrutari-stats-Number {
+text-align: right;
+padding-left: 10px;
+padding-right: 3px;
+}
+
+
+/*****************************************************
+* .scrutari-subsearch
+******************************************************/
+
+.scrutari-subsearch-Title {
+margin-top: 0;
+margin-bottom: 0;
+}
+.scrutari-subsearch-Form {
+margin-top: 0;
+margin-bottom: 25px;
+}
+
+
+/*****************************************************
+* .scrutari-title
+******************************************************/
+
+.scrutari-title-Main {
+font-size: 1.3em;
+margin-top: 20px;
+margin-bottom: 10px;	
+}

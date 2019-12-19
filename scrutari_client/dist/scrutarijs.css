@@ -10,12 +10,6 @@ display: none !important;
 color: grey;
 }
 
-.scrutari-Label {
-font-weight: normal;
-display: inline;
-margin-bottom: 0;
-}
-
 .scrutari-Mark {
 background-color: #e9e9e9;
 }
@@ -76,16 +70,38 @@ background-color: #e9e9e9;
 * .scrutari-fiche
 ******************************************************/
 
-.scrutari-fiche-AttrBlocks {
-margin-left: 30px;
-font-size: 1.0em;
-margin-bottom: 2px;
-}
-
 .scrutari-fiche-Attribute {
 margin-left: 15px;
 font-size: 1.0em;
 margin-bottom: 2px;
+}
+
+.scrutari-fiche-AttributeBlock {
+margin-bottom: 2px;
+}
+
+.scrutari-fiche-AttributeTitle {
+margin-left: 15px;
+font-size: 1.0em;
+margin-bottom: 0;
+}
+
+.scrutari-fiche-AttributeValue {
+margin-left: 30px;
+font-size: 1.0em;
+margin-bottom: 0;
+}
+
+.scrutari-fiche-AttributeValues {
+    
+}
+
+.scrutari-fiche-AttributeValue::before {
+    content: '… ';
+}
+
+.scrutari-fiche-AttributeValue::after {
+    content: ' …';
 }
 
 .scrutari-fiche-Block {
@@ -101,7 +117,7 @@ margin-left: 21px;
 margin-left: 110px;
 }
 
-.scrutari-fiche-Body:after {
+.scrutari-fiche-Body::after {
 content: '';
 display: block;
 clear: left;
@@ -181,17 +197,27 @@ background-color: #e9e9e9;
 }
 
 .scrutari-history-Block {
-padding-top: 2px;
-padding-bottom: 2px;
-padding-left: 3px;
-border-left-style: solid;
-border-left-width: 1px;
-border-left-color: #515151;
+padding: 2px;
 margin-top: 6px;
 margin-left: 6px;
 word-wrap: break-word;
 }
 
+.scrutari-history-Load {
+    
+}
+
+.scrutari-history-Remove {
+    
+}
+
+.scrutari-history-Search {
+    
+}
+
+.scrutari-history-Subsearch {
+    margin-left: 10px;
+}
 
 /*****************************************************
 * .scrutari-icon
@@ -303,30 +329,6 @@ font-weight: bold;
 
 
 /*****************************************************
-* .scrutari-top-articles
-******************************************************/
-
-#scrutari-top-articles, #scrutari-last-articles {
-	height: 200px;
-	overflow: scroll;
-}
-
-#scrutari-top-articles .scrutari-fiche-Block, #scrutari-last-articles .scrutari-fiche-Block  {
-	max-height: 70px;
-	overflow: hidden;
-}
-
-
-/*****************************************************
-* .scrutari-last-articles
-******************************************************/
-
-#scrutari-last-articles {
-	height: 200px;
-	overflow: scroll;
-}
-
-/*****************************************************
 * .scrutari-pagination
 ******************************************************/
 
@@ -362,32 +364,13 @@ color: green;
 opacity: 0.5;
 }
 
-.scrutari-panel-Div {
-margin-bottom: 0;
-}
-
 .scrutari-panel-Excluded {
 text-decoration: line-through;
 color: grey;
 }
 
-.scrutari-panel-Heading {
-padding-top : 5px;
-padding-bottom: 5px;
-}
-
 .scrutari-panel-Icon {
 vertical-align: baseline;
-}
-
-.scrutari-panel-Title {
-font-size: 1.0em;
-line-height: 1.1;
-cursor: pointer;
-}
-
-.scrutari-panel-WithTools {
-padding-top : 3px;
 }
 
 

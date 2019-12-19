@@ -1998,12 +1998,9 @@ Scrutari.Client.Result.show = function (client, scrutariResult, searchOrigin) {
         Scrutari.Client.Result.setCurrentMain(client, scrutariResult);
         Scrutari.Client.Result.addToHistory(client, scrutariResult);
     } else if (searchOrigin === "subsearch") {
-        var subsearchText =  " + " + Scrutari.Utils.formatSearchSequence(client, scrutariResult) + " = ";
+        var subsearchText =  "+ " + Scrutari.Utils.formatSearchSequence(client, scrutariResult) + " = " + scrutariResult.getFicheCount();
         if (client.currentHistoryName) {
             Scrutari.$(client.$block(client.currentHistoryName), {scrutariRole: "subsearch"}).text(subsearchText);
-            var initialRequestValue = [...client.$block("historyList")[0].getElementsByClassName('scrutari-history-Active')][0].getElementsByTagName('a')[0].innerHTML.split('*')[0];
-            scrutariResult.searchMeta.q = initialRequestValue + subsearchText;
-            Scrutari.Client.Result.addToHistory(client, scrutariResult);
         }
     }
     if (ficheCount === 0) {
@@ -2210,6 +2207,8 @@ Scrutari.Client.Result.addToHistory = function (client, scrutariResult) {
         fichestat: scrutariResult.getFicheCount(),
         sequence: Scrutari.Utils.formatSearchSequence(client, scrutariResult)
     };
+    console.log(contextObj)
+    console.log(client.render("history", contextObj))
     $historyListBlock.prepend(client.render("history", contextObj));
 };
 Scrutari.Client.Result.loadHistory = function (client, historyName) {

@@ -32,6 +32,7 @@ if (isset($_REQUEST["version"])) {
 <script src="static/scrutarijs/l10n/fr.js"></script>
 <script src="static/scrutarijs/frameworks/bootstrap3.js"></script>
 <script src="static/jsrender/0.9.84/jsrender.min.js"></script>
+<script src="static/js/scroll-carousels.js"></script>
 <?php if ($isStart) {?>
 <script src="static/js/index.js"></script>
 <?php } else {?>

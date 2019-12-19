@@ -303,6 +303,30 @@ font-weight: bold;
 
 
 /*****************************************************
+* .scrutari-top-articles
+******************************************************/
+
+#scrutari-top-articles, #scrutari-last-articles {
+	height: 200px;
+	overflow: scroll;
+}
+
+#scrutari-top-articles .scrutari-fiche-Block, #scrutari-last-articles .scrutari-fiche-Block  {
+	max-height: 70px;
+	overflow: hidden;
+}
+
+
+/*****************************************************
+* .scrutari-last-articles
+******************************************************/
+
+#scrutari-last-articles {
+	height: 200px;
+	overflow: scroll;
+}
+
+/*****************************************************
 * .scrutari-pagination
 ******************************************************/
 

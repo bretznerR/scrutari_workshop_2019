@@ -1998,7 +1998,7 @@ Scrutari.Client.Result.show = function (client, scrutariResult, searchOrigin) {
         Scrutari.Client.Result.setCurrentMain(client, scrutariResult);
         Scrutari.Client.Result.addToHistory(client, scrutariResult);
     } else if (searchOrigin === "subsearch") {
-        var subsearchText =  "+ " + Scrutari.Utils.formatSearchSequence(client, scrutariResult) + " = " + scrutariResult.getFicheCount();
+        var subsearchText =  " + " + Scrutari.Utils.formatSearchSequence(client, scrutariResult) + " = ";
         if (client.currentHistoryName) {
             Scrutari.$(client.$block(client.currentHistoryName), {scrutariRole: "subsearch"}).text(subsearchText);
             var initialRequestValue = [...client.$block("historyList")[0].getElementsByClassName('scrutari-history-Active')][0].getElementsByTagName('a')[0].innerHTML.split('*')[0];
